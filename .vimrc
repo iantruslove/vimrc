@@ -23,3 +23,12 @@ autocmd WinLeave * setlocal nocursorline
 syntax on
 filetype plugin indent on
 
+" Always show the tab header
+set showtabline=2
+
+" Default tab settings
+set tabstop=3
+set shiftwidth=3
+set noexpandtab
+
+
