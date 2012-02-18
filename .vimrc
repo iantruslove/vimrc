@@ -1,6 +1,9 @@
 call pathogen#infect()
 call pathogen#helptags()
 
+syntax on
+filetype plugin indent on
+
 " Quickly edit/reload the vimrc file
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
@@ -42,24 +45,10 @@ set noerrorbells         " don't beep
 set nobackup
 set noswapfile
 
-" Set up line highlighing
-":hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-":hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-
-" toggle between horizontal and vertical column highlight
-":nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
-
-" Only do highlighting in the current window
-"autocmd WinEnter * setlocal cursorline
-"autocmd WinLeave * setlocal nocursorline
-
-syntax on
-filetype plugin indent on
-
 """"""""""""""""""
 " automcmd statements!
 
 " reset all pre-existing autocmds
-autocmd!
+" autocmd!
 autocmd VimEnter * NERDTree    " Open NERDTree on startup
 """"""""""""""""""
