@@ -10,6 +10,8 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 set nocompatible
 
+set ruler 			" Show line and col number
+
 "set hidden        " Hide buffers, don't close
 
 set hlsearch      " Highlight the search term
