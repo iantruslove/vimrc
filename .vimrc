@@ -10,7 +10,7 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 set nocompatible
 
-set hidden        " Hide buffers, don't close
+"set hidden        " Hide buffers, don't close
 
 set hlsearch      " Highlight the search term
 set incsearch     " show search matches as you type
