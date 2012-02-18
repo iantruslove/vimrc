@@ -10,8 +10,8 @@ set number
 set hlsearch
 
 " Set up line highlighing
-:hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
-:hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+":hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+":hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 
 " toggle between horizontal and vertical column highlight
 :nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
