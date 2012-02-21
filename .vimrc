@@ -5,8 +5,8 @@ syntax on
 filetype plugin indent on
 
 " Quickly edit/reload the vimrc file
-nmap <silent> <leader>ev :e $MYVIMRC<CR>
-nmap <silent> <leader>sv :so $MYVIMRC<CR>
+nmap <silent> <leader>ev :e $MYVIMRC<CR> 	" edit
+nmap <silent> <leader>sv :so $MYVIMRC<CR> " source
 
 set nocompatible
 
