@@ -19,3 +19,6 @@
 [submodule "bundle/vim-filesearch"]
 	path = bundle/vim-filesearch
 	url = git://github.com/jeetsukumaran/vim-filesearch.git
+[submodule "bundle/vim-markdown-preview"]
+	path = bundle/vim-markdown-preview
+	url = git://github.com/nelstrom/vim-markdown-preview.git
