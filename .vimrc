@@ -59,6 +59,9 @@ set noswapfile
 " Configure CtrlP plugin
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 
+" Configure vim-ruby-debugger plugin
+let g:ruby_debugger_progname = 'mvim'
+
 """"""""""""""""""
 " automcmd statements!
 
