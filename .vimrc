@@ -56,6 +56,9 @@ set noerrorbells         " don't beep
 set nobackup
 set noswapfile
 
+" Configure CtrlP plugin
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
+
 """"""""""""""""""
 " automcmd statements!
 
