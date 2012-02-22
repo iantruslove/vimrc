@@ -8,6 +8,15 @@ filetype plugin indent on
 nmap <silent> <leader>ev :e $MYVIMRC<CR> 	" edit
 nmap <silent> <leader>sv :so $MYVIMRC<CR> " source
 
+" (D is the Command key)
+map <D-[> :bprevious<CR> 	" Cycle to previous buffer
+map <D-]> :bnext<CR> 		" Cycle to next buffer
+
+map <C-h> <C-W>h
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-l> <C-W>l
+
 set nocompatible
 
 set ruler 			" Show line and col number
