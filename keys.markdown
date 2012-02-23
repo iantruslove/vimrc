@@ -9,6 +9,10 @@
 * tab - jump to next location in jump list
 * C-o - jump to previous location in jump list
 
+## Copy Paste
+
+* C-o p - paste *whilst in insert mode*
+
 # Plugins
 
 ## vim-rspec
