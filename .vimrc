@@ -17,6 +17,9 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-l> <C-W>l
 
+nmap <C-n> :NERDTreeToggle<CR>
+nmap <C-b> :ConqueTerm bash --rcfile ~/.bash_profile<CR>
+
 set nocompatible
 
 set ruler 			" Show line and col number
