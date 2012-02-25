@@ -40,3 +40,6 @@
 [submodule "bundle/vim-conque"]
 	path = bundle/vim-conque
 	url = git://github.com/rson/vim-conque.git
+[submodule "bundle/ShowMarks"]
+	path = bundle/ShowMarks
+	url = git://github.com/harleypig/ShowMarks.git
