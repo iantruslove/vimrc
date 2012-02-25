@@ -24,7 +24,7 @@ set nocompatible
 
 set ruler 			" Show line and col number
 
-"set hidden        " Hide buffers, don't close
+set hidden        " Hide buffers, don't close
 
 set hlsearch      " Highlight the search term
 set incsearch     " show search matches as you type
@@ -36,7 +36,7 @@ set autoindent    " always set autoindenting on
 set copyindent    " copy the previous indentation on autoindenting
 set number        " always show line numbers
 set showmatch     " set show matching parenthesis
-set ignorecase    " ignore case when searching
+"set ignorecase    " ignore case when searching
 set smartcase     " ignore case if search pattern is all lowercase, case-sensitive otherwise
 
 set showtabline=2 " Always show the tab header
@@ -59,19 +59,68 @@ set noerrorbells         " don't beep
 set nobackup
 set noswapfile
 
+
+"""  Key mappings """
+
+function! MoveLineUp()
+  call MoveLineOrVisualUp(".", "")
+endfunction
+
+function! MoveLineDown()
+  call MoveLineOrVisualDown(".", "")
+endfunction
+
+function! MoveVisualUp()
+  call MoveLineOrVisualUp("'<", "'<,'>")
+  normal gv
+endfunction
+
+function! MoveVisualDown()
+  call MoveLineOrVisualDown("'>", "'<,'>")
+  normal gv
+endfunction
+
+function! MoveLineOrVisualUp(line_getter, range)
+  let l_num = line(a:line_getter)
+  if l_num - v:count1 - 1 < 0
+    let move_arg = "0"
+  else
+    let move_arg = a:line_getter." -".(v:count1 + 1)
+  endif
+  call MoveLineOrVisualUpOrDown(a:range."move ".move_arg)
+endfunction
+
+function! MoveLineOrVisualDown(line_getter, range)
+  let l_num = line(a:line_getter)
+  if l_num + v:count1 > line("$")
+    let move_arg = "$"
+  else
+    let move_arg = a:line_getter." +".v:count1
+  endif
+  call MoveLineOrVisualUpOrDown(a:range."move ".move_arg)
+endfunction
+
+function! MoveLineOrVisualUpOrDown(move_arg)
+  let col_num = virtcol(".")
+  execute "silent! ".a:move_arg
+  execute "normal! ".col_num."|"
+endfunction
+
+nnoremap <silent> <C-M-Up> :<C-u>call MoveLineUp()<CR>
+nnoremap <silent> <C-M-Down> :<C-u>call MoveLineDown()<CR>
+inoremap <silent> <C-M-Up> <C-o>:<C-u>call MoveLineUp()<CR>
+inoremap <silent> <C-M-Down> <C-o>:<C-u>call MoveLineDown()<CR>
+vnoremap <silent> <C-M-Up> :<C-u>call MoveVisualUp()<CR>
+vnoremap <silent> <C-M-Down> :<C-u>call MoveVisualDown()<CR>
+
+
+""" Plugin Config """
+
 " Configure CtrlP plugin
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 
 " Configure vim-ruby-debugger plugin
 let g:ruby_debugger_progname = 'mvim'
-
-""""""""""""""""""
-" automcmd statements!
-
-" reset all pre-existing autocmds
-" autocmd!
-autocmd VimEnter * NERDTree    " Open NERDTree on startup
-""""""""""""""""""
 
 " :Shell command: runs a shell command and dumps output to a scratch buffer.
 " See http://vim.wikia.com/wiki/Display_output_of_shell_commands_in_new_window
@@ -94,4 +143,12 @@ function! s:RunShellCommand(cmdline)
   setlocal nomodifiable
   1
 endfunction
+
+
+""" Autocommands """
+
+" autocmd!     " reset all pre-existing autocmds
+autocmd VimEnter * NERDTree    " Open NERDTree on startup
+""""""""""""""""""
+
 
