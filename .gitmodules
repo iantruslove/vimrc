@@ -35,7 +35,7 @@
 	path = bundle/taglist
 	url = git://github.com/vim-scripts/taglist.vim.git
 [submodule "vim-conque"]
-	path = vim-conque
+	path = bundle/vim-conque
 	url = git://github.com/rson/vim-conque.git
 [submodule "bundle/vim-surround"]
 	path = bundle/vim-surround
