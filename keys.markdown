@@ -21,3 +21,20 @@
 
 * :RunSpec to run specs in current file
 * n - jump to source of next error
+
+## Rdebugger
+
+* `:Rdebugger script.rb`
+* `:Rdebugger 'script.rb with arguments'`
+* `:RdbLog` - shows log from current script
+* `:RdbStop` - stops running the debugging server
+* `<Leader>b` - toggle breakpoint
+* <Leader>v - open variables window
+* <Leader>m - open breakpoints window
+* <Leader>t - open frames window
+* <Leader>s - step
+* <Leader>f - finish
+* <Leader>n - next
+* <Leader>c - continue
+* <Leader>e - exit
+* <Leader>d - remove all breakpoints
