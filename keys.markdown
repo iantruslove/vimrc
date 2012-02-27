@@ -19,6 +19,13 @@
 
 # Plugins
 
+## Fugitive
+
+* `:Gdiff` - enter merge mode for a conflicted file
+* `:Gwrite` - mark the merge as complete, and add the file to the commit list
+
+*Remember: `git rebase --continue` after a rebase merge to finish off the rebase*
+
 ## vim-rspec
 
 <https://github.com/skwp/vim-rspec>
