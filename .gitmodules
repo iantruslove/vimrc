@@ -78,3 +78,6 @@
 	path = bundle/vim-unimpaired
 	url = git://github.com/tpope/vim-unimpaired.git
 	ignore = untracked
+[submodule "bundle/jshint.vim"]
+	path = bundle/jshint.vim
+	url = git://github.com/manalang/jshint.vim.git
