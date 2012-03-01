@@ -60,9 +60,9 @@ set smartcase     " ignore case if search pattern is all lowercase, case-sensiti
 set showtabline=2 " Always show the tab header
 
 " Tab settings
-set tabstop=3
-set shiftwidth=3
-set noexpandtab
+set tabstop=2
+set shiftwidth=2
+set expandtab
 set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
 set smarttab      " insert tabs on the start of a line according to shiftwidth, not tabstop
 
@@ -133,6 +133,9 @@ vnoremap <silent> <C-M-Down> :<C-u>call MoveVisualDown()<CR>
 
 
 """ Plugin Config """
+
+" Turn off ShowMarks on startup
+let g:showmarks_enable = 0
 
 " Configure snipmate plugin
 let g:snips_trigger_key='<c-space>'
