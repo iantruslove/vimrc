@@ -13,6 +13,10 @@
 
 * C-o p - paste *whilst in insert mode*
 
+## Search and Replace
+
+* `&` - redo last replace
+
 # Plugins
 
 ## vim-rspec
@@ -38,3 +42,12 @@
 * <Leader>c - continue
 * <Leader>e - exit
 * <Leader>d - remove all breakpoints
+
+## vim-filesearch
+
+* `:Fsgrep` - find files containing regex 
+	* `:Fsgrep /TODO/ .` - find all files containing `TODO` in pwd
+	* `:Fsgrep /TODO/js src` - find all Javascript files containing `TODO` in the `src/` directory
+* `:Fsfind` - find files with name matching regex
+* `:Fsglob` - find files with name matching glob
+
