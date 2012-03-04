@@ -84,3 +84,6 @@
 [submodule "bundle/VimClojure"]
 	path = bundle/VimClojure
 	url = git://github.com/vim-scripts/VimClojure.git
+[submodule "bundle/vimoutliner"]
+	path = bundle/vimoutliner
+	url = git://github.com/vimoutliner/vimoutliner.git
