@@ -81,3 +81,6 @@
 [submodule "bundle/jshint.vim"]
 	path = bundle/jshint.vim
 	url = git://github.com/manalang/jshint.vim.git
+[submodule "bundle/VimClojure"]
+	path = bundle/VimClojure
+	url = git://github.com/vim-scripts/VimClojure.git
