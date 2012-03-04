@@ -93,3 +93,4 @@
 [submodule "bundle/TaskList"]
 	path = bundle/TaskList
 	url = git://github.com/vim-scripts/TaskList.vim.git
+	ignore = untracked
