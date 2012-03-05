@@ -10,10 +10,6 @@
 	path = bundle/supertab
 	url = https://github.com/ervandew/supertab.git
 	ignore = untracked
-[submodule "bundle/vcscommand"]
-	path = bundle/vcscommand
-	url = git://repo.or.cz/vcscommand
-	ignore = untracked
 [submodule "bundle/vim-markdown"]
 	path = bundle/vim-markdown
 	url = https://github.com/plasticboy/vim-markdown.git
