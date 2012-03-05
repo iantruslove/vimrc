@@ -134,6 +134,9 @@ vnoremap <silent> <C-M-Down> :<C-u>call MoveVisualDown()<CR>
 
 """ Plugin Config """
 
+" Remap TaskList plugin
+map <leader>? <Plug>TaskList
+
 " Turn off ShowMarks on startup
 let g:showmarks_enable = 0
 
