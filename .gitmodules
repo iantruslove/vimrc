@@ -94,3 +94,7 @@
 	path = bundle/TaskList
 	url = git://github.com/vim-scripts/TaskList.vim.git
 	ignore = untracked
+[submodule "bundle/matchit"]
+	path = bundle/matchit
+	url = git://github.com/vim-scripts/matchit.zip.git
+	ignore = untracked
