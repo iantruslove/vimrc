@@ -137,6 +137,10 @@ vnoremap <silent> <C-M-Down> :<C-u>call MoveVisualDown()<CR>
 " Remap TaskList plugin
 map <leader>? <Plug>TaskList
 
+" Settings for VimClojure
+let g:vimclojure#HighlightBuiltins = 1  " Highlight Clojure's builtins
+let g:vimclojure#ParenRainbow = 1       " Rainbow parentheses
+
 " Turn off ShowMarks on startup
 let g:showmarks_enable = 0
 

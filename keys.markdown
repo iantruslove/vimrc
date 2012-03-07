@@ -58,3 +58,14 @@
 * `:Fsfind` - find files with name matching regex
 * `:Fsglob` - find files with name matching glob
 
+## Clojure
+
+http://writequit.org/blog/?p=386
+* Start a screen session up on a terminal
+  * `screen -S clojure` # this names the session "clojure"
+  * List open screen sessions with `screen -ls`
+* Start a REPL in the screen session
+* `<C-c> <C-c>` - send function under cursor to the repl
+* `<C-c> v` - set up the screen in slime.vim again
+
+
