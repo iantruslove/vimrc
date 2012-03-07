@@ -38,6 +38,9 @@ map <C-l> <C-W>l
 nmap <C-n> :NERDTreeToggle<CR>
 nmap <C-b> :ConqueTerm bash --rcfile ~/.bash_profile<CR>
 
+" Run a screen command for this line only  (as opposed to this paragraph)
+nmap <C-c><C-l> 0v$<C-c><C-c>
+
 set nocompatible
 
 set ruler 			" Show line and col number
