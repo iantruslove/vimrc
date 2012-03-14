@@ -19,12 +19,28 @@ let g:pathogen_disabled = []   " To disable a plugin, add its bundle name to thi
 call pathogen#infect()
 call pathogen#helptags()
 
+" Remap all of the SVNCommand commands
+nmap ,sa <plug>SVNAdd
+nmap ,sn <plug>SVNAnnotate
+nmap ,sc <plug>SVNCommit
+nmap ,sd <plug>SVNDiff
+nmap ,sg <plug>SVNGotoOriginal
+nmap ,sG <plug>SVNGotoOriginal!
+nmap ,sl <plug>SVNLog
+nmap ,sw <plug>SVNReview
+nmap ,ss <plug>SVNStatus
+nmap ,si <plug>SVNInfo
+nmap ,sr <plug>SVNResolved
+nmap ,su <plug>SVNUpdate
+nmap ,sv <plug>SVNVimDiff
+nmap ,sp <plug>SVNPropedit
+
 syntax on
 filetype plugin indent on
 
 " Quickly edit/reload the vimrc file
 nmap <silent> <leader>ev :e $MYVIMRC<CR> 	" edit
-nmap <silent> <leader>sv :so $MYVIMRC<CR> " source
+nmap <silent> <leader>lv :so $MYVIMRC<CR> " source
 
 " (D is the Command key)
 map <D-[> :bprevious<CR> 	" Cycle to previous buffer
@@ -182,7 +198,7 @@ endfunction
 """ Autocommands """
 
 " autocmd!     " reset all pre-existing autocmds
-autocmd VimEnter * NERDTree    " Open NERDTree on startup
+"autocmd VimEnter * NERDTree    " Open NERDTree on startup
 """"""""""""""""""
 
 
