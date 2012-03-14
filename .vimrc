@@ -1,4 +1,4 @@
-let g:pathogen_disabled = []   " To disable a plugin, add its bundle name to this list
+let g:pathogen_disabled = ["nerdtree"]   " To disable a plugin, add its bundle name to this list, e.g [\"nerdtree\"]
 
 " for some reason the csscolor plugin is very slow when run on the terminal but not in GVim, so disable it if no GUI is running
 "if !has('gui_running')
