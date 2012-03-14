@@ -3,6 +3,7 @@
 ## Reformatting 
 
 * :gq{motion} - linewraps the range of text
+* :gqgq - linewraps curent line
 
 ## Motion
 
