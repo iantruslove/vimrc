@@ -42,10 +42,6 @@ filetype plugin indent on
 nmap <silent> <leader>ev :e $MYVIMRC<CR> 	" edit
 nmap <silent> <leader>lv :so $MYVIMRC<CR> " source
 
-" (D is the Command key)
-map <D-[> :bprevious<CR> 	" Cycle to previous buffer
-map <D-]> :bnext<CR> 		" Cycle to next buffer
-
 map <C-h> <C-W>h
 map <C-j> <C-W>j
 map <C-k> <C-W>k
@@ -96,6 +92,8 @@ set noerrorbells         " don't beep
 set nobackup
 set noswapfile
 
+""" Purdy colors please
+colorscheme gentooish
 
 """  Key mappings """
 
