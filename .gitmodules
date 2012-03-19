@@ -101,10 +101,6 @@
 	path = bundle/screen
 	url = git://github.com/ervandew/screen.git
 	ignore = untracked
-[submodule "bundle/svncommand-tng"]
-	path = bundle/svncommand-tng
-	url = git://github.com/vim-scripts/svncommand-tng.git
-	ignore = untracked
 [submodule "bundle/colorschemes"]
 	path = bundle/colorschemes
 	url = git://github.com/flazz/vim-colorschemes.git
