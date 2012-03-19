@@ -1,4 +1,4 @@
-let g:pathogen_disabled = []   " To disable a plugin, add its bundle name to this list
+let g:pathogen_disabled = ["nerdtree"]   " To disable a plugin, add its bundle name to this list
 
 " for some reason the csscolor plugin is very slow when run on the terminal but not in GVim, so disable it if no GUI is running
 "if !has('gui_running')
@@ -18,22 +18,6 @@ let g:pathogen_disabled = []   " To disable a plugin, add its bundle name to thi
 
 call pathogen#infect()
 call pathogen#helptags()
-
-" Remap all of the SVNCommand commands
-nmap ,sa <plug>SVNAdd
-nmap ,sn <plug>SVNAnnotate
-nmap ,sc <plug>SVNCommit
-nmap ,sd <plug>SVNDiff
-nmap ,sg <plug>SVNGotoOriginal
-nmap ,sG <plug>SVNGotoOriginal!
-nmap ,sl <plug>SVNLog
-nmap ,sw <plug>SVNReview
-nmap ,ss <plug>SVNStatus
-nmap ,si <plug>SVNInfo
-nmap ,sr <plug>SVNResolved
-nmap ,su <plug>SVNUpdate
-nmap ,sv <plug>SVNVimDiff
-nmap ,sp <plug>SVNPropedit
 
 syntax on
 filetype plugin indent on
