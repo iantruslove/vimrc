@@ -1,4 +1,4 @@
-let g:pathogen_disabled = []   " To disable a plugin, add its bundle name to this list, e.g [\"nerdtree\"]
+let g:pathogen_disabled = []   " To disable a plugin, add its bundle name in quotes to this list
 
 " for some reason the csscolor plugin is very slow when run on the terminal but not in GVim, so disable it if no GUI is running
 "if !has('gui_running')
@@ -19,36 +19,30 @@ let g:pathogen_disabled = []   " To disable a plugin, add its bundle name to thi
 call pathogen#infect()
 call pathogen#helptags()
 
-" Remap all of the SVNCommand commands
-nmap ,sa <plug>SVNAdd
-nmap ,sn <plug>SVNAnnotate
-nmap ,sc <plug>SVNCommit
-nmap ,sd <plug>SVNDiff
-nmap ,sg <plug>SVNGotoOriginal
-nmap ,sG <plug>SVNGotoOriginal!
-nmap ,sl <plug>SVNLog
-nmap ,sw <plug>SVNReview
-nmap ,ss <plug>SVNStatus
-nmap ,si <plug>SVNInfo
-nmap ,sr <plug>SVNResolved
-nmap ,su <plug>SVNUpdate
-nmap ,sv <plug>SVNVimDiff
-nmap ,sp <plug>SVNPropedit
-
 " Remap buffergator bindings
 let g:buffergator_suppress_keymaps = 1  " disable default keybindings
-nmap ,b :BuffergatorOpen<CR>
-nmap ,B :BuffergatorClose<CR>
-nmap ,t :BuffergatorTabsOpen<CR>
-nmap ,T :BuffergatorTabsClose<CR>
+nmap ,bb :BuffergatorToggle<CR>
+nmap ,bt :BuffergatorTabsToggle<CR>
 let g:buffergator_autodismiss_on_select = 0 "stop buffergator from autoclosing
+
+" Remap ruby debugger bindings
+map <Leader>rb  :call g:RubyDebugger.toggle_breakpoint()<CR>
+map <Leader>rv  :call g:RubyDebugger.open_variables()<CR>
+map <Leader>rm  :call g:RubyDebugger.open_breakpoints()<CR>
+map <Leader>rt  :call g:RubyDebugger.open_frames()<CR>
+map <Leader>rs  :call g:RubyDebugger.step()<CR>
+map <Leader>rf  :call g:RubyDebugger.finish()<CR>
+map <Leader>rn  :call g:RubyDebugger.next()<CR>
+map <Leader>rc  :call g:RubyDebugger.continue()<CR>
+map <Leader>re  :call g:RubyDebugger.exit()<CR>
+map <Leader>rd  :call g:RubyDebugger.remove_breakpoints()<CR>
 
 syntax on
 filetype plugin indent on
 
 " Quickly edit/reload the vimrc file
 nmap <silent> <leader>ev :e $MYVIMRC<CR> 	" edit
-nmap <silent> <leader>lv :so $MYVIMRC<CR> " source
+nmap <silent> <leader>sv :so $MYVIMRC<CR> " source
 
 " (D is the Command key)
 map <D-[> :bprevious<CR> 	" Cycle to previous buffer
@@ -59,8 +53,7 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-l> <C-W>l
 
-nmap <C-n> :NERDTreeToggle<CR>
-nmap <C-b> :ConqueTerm bash --rcfile ~/.bash_profile<CR>
+nmap ,nn :NERDTreeToggle<CR>
 
 " Run a screen command for this line only  (as opposed to this paragraph)
 nmap <C-c><C-l> 0v$<C-c><C-c>
