@@ -1,4 +1,4 @@
-let g:pathogen_disabled = ["nerdtree"]   " To disable a plugin, add its bundle name to this list, e.g [\"nerdtree\"]
+let g:pathogen_disabled = []   " To disable a plugin, add its bundle name to this list, e.g [\"nerdtree\"]
 
 " for some reason the csscolor plugin is very slow when run on the terminal but not in GVim, so disable it if no GUI is running
 "if !has('gui_running')
@@ -34,6 +34,14 @@ nmap ,sr <plug>SVNResolved
 nmap ,su <plug>SVNUpdate
 nmap ,sv <plug>SVNVimDiff
 nmap ,sp <plug>SVNPropedit
+
+" Remap buffergator bindings
+let g:buffergator_suppress_keymaps = 1  " disable default keybindings
+nmap ,b :BuffergatorOpen<CR>
+nmap ,B :BuffergatorClose<CR>
+nmap ,t :BuffergatorTabsOpen<CR>
+nmap ,T :BuffergatorTabsClose<CR>
+let g:buffergator_autodismiss_on_select = 0 "stop buffergator from autoclosing
 
 syntax on
 filetype plugin indent on

@@ -105,3 +105,6 @@
 	path = bundle/svncommand-tng
 	url = git://github.com/vim-scripts/svncommand-tng.git
 	ignore = untracked
+[submodule "bundle/buffergator"]
+	path = bundle/buffergator
+	url = git://github.com/jeetsukumaran/vim-buffergator.git
