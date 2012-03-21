@@ -171,6 +171,7 @@ let g:snips_trigger_key='<c-space>'
 
 " Configure CtrlP plugin
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
+let g:ctrlp_working_path_mode = 0 " just use vim's PWD as the root of the ctrlp search
 
 " Configure vim-ruby-debugger plugin
 let g:ruby_debugger_progname = 'mvim'
