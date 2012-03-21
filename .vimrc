@@ -19,20 +19,41 @@ let g:pathogen_disabled = []   " To disable a plugin, add its bundle name to thi
 call pathogen#infect()
 call pathogen#helptags()
 
+" Remap buffergator bindings
+let g:buffergator_suppress_keymaps = 1  " disable default keybindings
+nmap ,bb :BuffergatorToggle<CR>
+nmap ,bt :BuffergatorTabsToggle<CR>
+let g:buffergator_autodismiss_on_select = 0 "stop buffergator from autoclosing
+
+" Remap ruby debugger bindings
+map <Leader>rb  :call g:RubyDebugger.toggle_breakpoint()<CR>
+map <Leader>rv  :call g:RubyDebugger.open_variables()<CR>
+map <Leader>rm  :call g:RubyDebugger.open_breakpoints()<CR>
+map <Leader>rt  :call g:RubyDebugger.open_frames()<CR>
+map <Leader>rs  :call g:RubyDebugger.step()<CR>
+map <Leader>rf  :call g:RubyDebugger.finish()<CR>
+map <Leader>rn  :call g:RubyDebugger.next()<CR>
+map <Leader>rc  :call g:RubyDebugger.continue()<CR>
+map <Leader>re  :call g:RubyDebugger.exit()<CR>
+map <Leader>rd  :call g:RubyDebugger.remove_breakpoints()<CR>
+
 syntax on
 filetype plugin indent on
 
 " Quickly edit/reload the vimrc file
 nmap <silent> <leader>ev :e $MYVIMRC<CR> 	" edit
-nmap <silent> <leader>lv :so $MYVIMRC<CR> " source
+nmap <silent> <leader>sv :so $MYVIMRC<CR> " source
+
+" (D is the Command key)
+map <D-[> :bprevious<CR> 	" Cycle to previous buffer
+map <D-]> :bnext<CR> 		" Cycle to next buffer
 
 map <C-h> <C-W>h
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-l> <C-W>l
 
-nmap <C-n> :NERDTreeToggle<CR>
-nmap <C-b> :ConqueTerm bash --rcfile ~/.bash_profile<CR>
+nmap ,nn :NERDTreeToggle<CR>
 
 " Learn vim movement keys, dammit!
 inoremap  <Up>     <NOP>

@@ -46,10 +46,6 @@
 	path = bundle/vim-surround
 	url = git://github.com/tpope/vim-surround.git
 	ignore = untracked
-[submodule "bundle/vim-conque"]
-	path = bundle/vim-conque
-	url = git://github.com/rson/vim-conque.git
-	ignore = untracked
 [submodule "bundle/ShowMarks"]
 	path = bundle/ShowMarks
 	url = git://github.com/harleypig/ShowMarks.git
@@ -109,3 +105,6 @@
 	path = bundle/vcscommand
 	url = git://repo.or.cz/vcscommand.git
 	ignore = untracked
+[submodule "bundle/buffergator"]
+	path = bundle/buffergator
+	url = git://github.com/jeetsukumaran/vim-buffergator.git
