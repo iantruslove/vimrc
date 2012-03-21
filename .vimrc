@@ -104,6 +104,8 @@ set noerrorbells         " don't beep
 set nobackup
 set noswapfile
 
+""" Purdy colors please
+colorscheme gentooish
 
 """  Key mappings """
 

@@ -3,6 +3,7 @@
 ## Reformatting 
 
 * :gq{motion} - linewraps the range of text
+* :gqgq - linewraps curent line
 
 ## Motion
 
@@ -68,4 +69,6 @@ http://writequit.org/blog/?p=386
 * `<C-c> <C-c>` - send function under cursor to the repl
 * `<C-c> v` - set up the screen in slime.vim again
 
+# Links
 
+* [Visual guide to vim color schemes](http://vimcolorschemetest.googlecode.com/svn/html/index-java.html)
