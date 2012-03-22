@@ -1,4 +1,4 @@
-let g:pathogen_disabled = []   " To disable a plugin, add its bundle name in quotes to this list
+let g:pathogen_disabled = []   " To disable a plugin, add its bundle name to this list
 
 " for some reason the csscolor plugin is very slow when run on the terminal but not in GVim, so disable it if no GUI is running
 "if !has('gui_running')
@@ -54,6 +54,17 @@ map <C-k> <C-W>k
 map <C-l> <C-W>l
 
 nmap ,nn :NERDTreeToggle<CR>
+
+" Learn vim movement keys, dammit!
+inoremap  <Up>     <NOP>
+inoremap  <Down>   <NOP>
+inoremap  <Left>   <NOP>
+inoremap  <Right>  <NOP>
+noremap   <Up>     <NOP>
+noremap   <Down>   <NOP>
+noremap   <Left>   <NOP>
+noremap   <Right>  <NOP>
+
 
 " Run a screen command for this line only  (as opposed to this paragraph)
 nmap <C-c><C-l> 0v$<C-c><C-c>
