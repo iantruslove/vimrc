@@ -21,9 +21,9 @@ call pathogen#helptags()
 
 " Remap buffergator bindings
 let g:buffergator_suppress_keymaps = 1  " disable default keybindings
+let g:buffergator_autodismiss_on_select = 0 "stop buffergator from autoclosing
 nmap ,bb :BuffergatorToggle<CR>
 nmap ,bt :BuffergatorTabsToggle<CR>
-let g:buffergator_autodismiss_on_select = 0 "stop buffergator from autoclosing
 
 " Remap ruby debugger bindings
 map <Leader>rb  :call g:RubyDebugger.toggle_breakpoint()<CR>
@@ -48,12 +48,15 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR> " source
 map <D-[> :bprevious<CR> 	" Cycle to previous buffer
 map <D-]> :bnext<CR> 		" Cycle to next buffer
 
+" Shortcuts for navigating around windows
 map <C-h> <C-W>h
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-l> <C-W>l
 
 nmap ,nn :NERDTreeToggle<CR>
+nmap ,no :NERDTree<CR>
+nmap ,nq :NERDTreeClose<CR>
 
 " Learn vim movement keys, dammit!
 inoremap  <Up>     <NOP>
@@ -66,7 +69,7 @@ noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
 
 
-" Run a screen command for this line only  (as opposed to this paragraph)
+" Run a slime screen command for this line only  (as opposed to this paragraph)
 nmap <C-c><C-l> 0v$<C-c><C-c>
 
 set nocompatible
@@ -108,8 +111,13 @@ set noerrorbells         " don't beep
 set nobackup
 set noswapfile
 
+" Disable toolbar in MacVim
+if has("gui_running")
+  set guioptions=egmrt
+endif
+
 """ Purdy colors please
-colorscheme gentooish
+colorscheme af " gentooish
 
 """  Key mappings """
 
@@ -182,6 +190,7 @@ let g:snips_trigger_key='<c-space>'
 
 " Configure CtrlP plugin
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
+let g:ctrlp_working_path_mode = 0
 
 " Configure vim-ruby-debugger plugin
 let g:ruby_debugger_progname = 'mvim'
