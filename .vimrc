@@ -59,14 +59,14 @@ nmap ,no :NERDTree<CR>
 nmap ,nq :NERDTreeClose<CR>
 
 " Learn vim movement keys, dammit!
-inoremap  <Up>     <NOP>
-inoremap  <Down>   <NOP>
-inoremap  <Left>   <NOP>
-inoremap  <Right>  <NOP>
-noremap   <Up>     <NOP>
-noremap   <Down>   <NOP>
-noremap   <Left>   <NOP>
-noremap   <Right>  <NOP>
+"inoremap  <Up>     <NOP>
+"inoremap  <Down>   <NOP>
+"inoremap  <Left>   <NOP>
+"inoremap  <Right>  <NOP>
+"noremap   <Up>     <NOP>
+"noremap   <Down>   <NOP>
+"noremap   <Left>   <NOP>
+"noremap   <Right>  <NOP>
 
 
 " Run a slime screen command for this line only  (as opposed to this paragraph)
@@ -117,7 +117,9 @@ if has("gui_running")
 endif
 
 """ Purdy colors please
-colorscheme af " gentooish
+"colorscheme gentooish
+"colorscheme af
+"colorscheme eclipse
 
 """  Key mappings """
 
