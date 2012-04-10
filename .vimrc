@@ -26,16 +26,16 @@ nmap ,bt :BuffergatorTabsToggle<CR>
 let g:buffergator_autodismiss_on_select = 0 "stop buffergator from autoclosing
 
 " Remap ruby debugger bindings
-map <Leader>rb  :call g:RubyDebugger.toggle_breakpoint()<CR>
-map <Leader>rv  :call g:RubyDebugger.open_variables()<CR>
-map <Leader>rm  :call g:RubyDebugger.open_breakpoints()<CR>
-map <Leader>rt  :call g:RubyDebugger.open_frames()<CR>
-map <Leader>rs  :call g:RubyDebugger.step()<CR>
-map <Leader>rf  :call g:RubyDebugger.finish()<CR>
-map <Leader>rn  :call g:RubyDebugger.next()<CR>
-map <Leader>rc  :call g:RubyDebugger.continue()<CR>
-map <Leader>re  :call g:RubyDebugger.exit()<CR>
-map <Leader>rd  :call g:RubyDebugger.remove_breakpoints()<CR>
+map <Leader>Rb  :call g:RubyDebugger.toggle_breakpoint()<CR>
+map <Leader>Rv  :call g:RubyDebugger.open_variables()<CR>
+map <Leader>Rm  :call g:RubyDebugger.open_breakpoints()<CR>
+map <Leader>Rt  :call g:RubyDebugger.open_frames()<CR>
+map <Leader>Rs  :call g:RubyDebugger.step()<CR>
+map <Leader>Rf  :call g:RubyDebugger.finish()<CR>
+map <Leader>Rn  :call g:RubyDebugger.next()<CR>
+map <Leader>Rc  :call g:RubyDebugger.continue()<CR>
+map <Leader>Re  :call g:RubyDebugger.exit()<CR>
+map <Leader>Rd  :call g:RubyDebugger.remove_breakpoints()<CR>
 
 syntax on
 filetype plugin indent on
