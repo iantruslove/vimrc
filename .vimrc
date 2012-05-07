@@ -111,9 +111,16 @@ set noerrorbells         " don't beep
 set nobackup
 set noswapfile
 
+" Show trailing spaces
+set list
+set listchars=""
+set listchars=tab:__
+set listchars+=trail:.
+
 " Disable toolbar in MacVim
 if has("gui_running")
   set guioptions=egmrt
+  set guifont=DejaVu\ Sans\ Mono:h12
 endif
 
 """ Purdy colors please
