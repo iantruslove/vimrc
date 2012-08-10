@@ -43,6 +43,7 @@ filetype plugin indent on
 " Quickly edit/reload the vimrc file
 nmap <silent> <leader>ev :e $MYVIMRC<CR> 	" edit
 nmap <silent> <leader>sv :so $MYVIMRC<CR> " source
+nmap <silent> <leader>ek :e ~/.vim/keys.markdown<CR>zR<CR>
 
 " (D is the Command key)
 map <D-[> :bprevious<CR> 	" Cycle to previous buffer

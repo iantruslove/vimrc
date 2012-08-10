@@ -18,6 +18,11 @@
 
 * `&` - redo last replace
 
+## Word and Character Counts
+
+* `g C-g` - count words and chars in document
+* `{visual}g C-g` - count words in visual selection
+
 # Plugins
 
 ## Fugitive
