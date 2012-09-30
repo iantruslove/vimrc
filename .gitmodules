@@ -10,10 +10,6 @@
 	path = bundle/supertab
 	url = https://github.com/ervandew/supertab.git
 	ignore = untracked
-[submodule "bundle/vim-markdown"]
-	path = bundle/vim-markdown
-	url = https://github.com/plasticboy/vim-markdown.git
-	ignore = untracked
 [submodule "bundle/vim-sparkup"]
 	path = bundle/vim-sparkup
 	url = http://github.com/bingaman/vim-sparkup.git
@@ -117,7 +113,15 @@
 	path = bundle/jshint.vim
 	url = git://github.com/robertkrimen/jshint.vim.git
 	ignore = untracked
+[submodule "bundle/vim-liquid"]
+	path = bundle/vim-liquid
+	url = git://github.com/tpope/vim-liquid.git
+	ignore = untracked
+[submodule "bundle/vim-markdown"]
+	path = bundle/vim-markdown
+	url = git://github.com/tpope/vim-markdown.git
+	ignore = untracked
 [submodule "bundle/vim-markdown-jekyll"]
 	path = bundle/vim-markdown-jekyll
+  ignore = untracked
 	url = git://github.com/PProvost/vim-markdown-jekyll.git
-	ignore = untracked
