@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/Users/truslove/projects/acadis_search'
+let g:netrw_dirhist_2='/Users/truslove/projects/datacaster-mddb'
+let g:netrw_dirhist_3='/Users/truslove/Dropbox/myshared/koans/clojure-koans'
+let g:netrw_dirhist_4='/Users/truslove/projects/crawler/nutch/plugins/parse-rawxml'
+let g:netrw_dirhist_5='/Users/truslove/projects/OpenSearchlight/.git'
+let g:netrw_dirhist_6='/Users/truslove/zshkit'
+let g:netrw_dirhist_7='/Users/truslove/.oh-my-zsh'
+let g:netrw_dirhist_8='/Users/truslove/Dropbox/myshared/projects/jekyll-template'

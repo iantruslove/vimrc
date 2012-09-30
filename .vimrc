@@ -121,11 +121,15 @@ set listchars+=trail:.
 " Disable toolbar in MacVim
 if has("gui_running")
   set guioptions=egmrt
-  set guifont=DejaVu\ Sans\ Mono:h12
+  set guifont=Inconsolata:h12
 endif
 
 """ Purdy colors please
-colorscheme af " gentooish
+colorscheme bensday
+"colorscheme af
+"colorscheme gentooish
+"colorscheme anotherdark
+"colorscheme blacklight
 
 """  Key mappings """
 

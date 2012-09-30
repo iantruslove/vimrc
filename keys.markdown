@@ -1,9 +1,13 @@
 # Key Bindings
 
+## Displaying wrapped text
+* `:set wrap linebreak textwidth=0 nolist` - sets up a non word-breaking wrap mode
+* `:set showbreak=…` - show linebreaks as the ellipsis (that's `<C-v>u2026` to get the "…")
+
 ## Reformatting 
 
-* :gq{motion} - linewraps the range of text
-* :gqgq - linewraps curent line
+* `:gq`{motion} - linewraps the range of text
+* `:gqgq` - linewraps curent line
 
 ## Motion
 
@@ -17,6 +21,7 @@
 ## Search and Replace
 
 * `&` - redo last replace
+* `C-r "` - pastes the last yanked text in command mode (e.g. highlight some text, `y`, `/<C-r>"`)
 
 ## Word and Character Counts
 
@@ -63,6 +68,12 @@
 	* `:Fsgrep /TODO/js src` - find all Javascript files containing `TODO` in the `src/` directory
 * `:Fsfind` - find files with name matching regex
 * `:Fsglob` - find files with name matching glob
+
+## Surround With
+
+* `ysiw"` - surrounds the current word with double quotes
+* `cs'"` - for the word under the cursor, change its surroundings from single quote to double quote
+* {visual}`S"` - surrounds the visual selection with double quotes
 
 ## Clojure
 
