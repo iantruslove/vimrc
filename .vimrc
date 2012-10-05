@@ -125,10 +125,10 @@ if has("gui_running")
 endif
 
 """ Purdy colors please
-colorscheme bensday
+"colorscheme bensday
 "colorscheme af
 "colorscheme gentooish
-"colorscheme anotherdark
+colorscheme anotherdark
 "colorscheme blacklight
 
 """  Key mappings """
