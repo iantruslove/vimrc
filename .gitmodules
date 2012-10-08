@@ -1,18 +1,18 @@
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
-	url = http://github.com/tpope/vim-fugitive.git
+	url = git://github.com/tpope/vim-fugitive.git
 	ignore = untracked
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
-	url = https://github.com/wycats/nerdtree.git
+	url = git://github.com/wycats/nerdtree.git
 	ignore = untracked
 [submodule "bundle/supertab"]
 	path = bundle/supertab
-	url = https://github.com/ervandew/supertab.git
+	url = git://github.com/ervandew/supertab.git
 	ignore = untracked
 [submodule "bundle/vim-sparkup"]
 	path = bundle/vim-sparkup
-	url = http://github.com/bingaman/vim-sparkup.git
+	url = git://github.com/bingaman/vim-sparkup.git
 	ignore = untracked
 [submodule "bundle/vim-filesearch"]
 	path = bundle/vim-filesearch
@@ -103,7 +103,7 @@
 	ignore = untracked
 [submodule "bundle/smartinput"]
 	path = bundle/smartinput
-	url = https://github.com/kana/vim-smartinput.git
+	url = git://github.com/kana/vim-smartinput.git
 	ignore = untracked
 [submodule "bundle/jshint.vim"]
 	path = bundle/jshint.vim
