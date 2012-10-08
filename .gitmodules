@@ -123,5 +123,9 @@
 	ignore = untracked
 [submodule "bundle/vim-markdown-jekyll"]
 	path = bundle/vim-markdown-jekyll
-  ignore = untracked
 	url = git://github.com/PProvost/vim-markdown-jekyll.git
+  ignore = untracked
+[submodule "bundle/vim-powerline"]
+	path = bundle/vim-powerline
+	url = git://github.com/Lokaltog/vim-powerline.git
+  ignore = untracked
