@@ -1,4 +1,4 @@
-let g:pathogen_disabled = []   " To disable a plugin, add its bundle name to this list
+let g:pathogen_disabled = ["vim-ruby-debugger"]   " To disable a plugin, add its bundle name to this list
 
 " for some reason the csscolor plugin is very slow when run on the terminal but not in GVim, so disable it if no GUI is running
 "if !has('gui_running')
@@ -15,6 +15,10 @@ let g:pathogen_disabled = []   " To disable a plugin, add its bundle name to thi
 "    call add(g:pathogen_disabled, 'fuzzyfinder')
 "    call add(g:pathogen_disabled, 'l9')
 "endif
+
+" Configure sparkup bindings
+let g:sparkupExecuteMapping = '<c-k>'
+let g:sparkupNextMapping = '<c-K>'
 
 call pathogen#infect()
 call pathogen#helptags()
@@ -60,14 +64,14 @@ nmap ,no :NERDTree<CR>
 nmap ,nq :NERDTreeClose<CR>
 
 " Learn vim movement keys, dammit!
-inoremap  <Up>     <NOP>
-inoremap  <Down>   <NOP>
-inoremap  <Left>   <NOP>
-inoremap  <Right>  <NOP>
-noremap   <Up>     <NOP>
-noremap   <Down>   <NOP>
-noremap   <Left>   <NOP>
-noremap   <Right>  <NOP>
+"inoremap  <Up>     <NOP>
+"inoremap  <Down>   <NOP>
+"inoremap  <Left>   <NOP>
+"inoremap  <Right>  <NOP>
+"noremap   <Up>     <NOP>
+"noremap   <Down>   <NOP>
+"noremap   <Left>   <NOP>
+"noremap   <Right>  <NOP>
 
 
 " Run a slime screen command for this line only  (as opposed to this paragraph)
@@ -177,12 +181,12 @@ function! MoveLineOrVisualUpOrDown(move_arg)
   execute "normal! ".col_num."|"
 endfunction
 
-nnoremap <silent> <C-M-Up> :<C-u>call MoveLineUp()<CR>
-nnoremap <silent> <C-M-Down> :<C-u>call MoveLineDown()<CR>
-inoremap <silent> <C-M-Up> <C-o>:<C-u>call MoveLineUp()<CR>
-inoremap <silent> <C-M-Down> <C-o>:<C-u>call MoveLineDown()<CR>
-vnoremap <silent> <C-M-Up> :<C-u>call MoveVisualUp()<CR>
-vnoremap <silent> <C-M-Down> :<C-u>call MoveVisualDown()<CR>
+nnoremap <silent> <M-Up> :<C-u>call MoveLineUp()<CR>
+nnoremap <silent> <M-Down> :<C-u>call MoveLineDown()<CR>
+inoremap <silent> <M-Up> <C-o>:<C-u>call MoveLineUp()<CR>
+inoremap <silent> <M-Down> <C-o>:<C-u>call MoveLineDown()<CR>
+vnoremap <silent> <M-Up> :<C-u>call MoveVisualUp()<CR>
+vnoremap <silent> <M-Down> :<C-u>call MoveVisualDown()<CR>
 
 
 """ Plugin Config """

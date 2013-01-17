@@ -28,6 +28,12 @@
 * `g C-g` - count words and chars in document
 * `{visual}g C-g` - count words in visual selection
 
+## Spellcheck
+
+* `:setlocal spell spelllang=en_us` to turn on spellchecker
+* `]s` to go to the next spelling mistake
+* `:h spell`
+
 # Plugins
 
 ## Fugitive
