@@ -17,8 +17,8 @@ let g:pathogen_disabled = ["vim-ruby-debugger"]   " To disable a plugin, add its
 "endif
 
 " Configure sparkup bindings
-let g:sparkupExecuteMapping = '<c-k>'
-let g:sparkupNextMapping = '<c-K>'
+let g:sparkupExecuteMapping = '<c-e>'
+let g:sparkupNextMapping = '<c-e>'
 
 call pathogen#infect()
 call pathogen#helptags()
@@ -239,5 +239,6 @@ endfunction
 " autocmd!     " reset all pre-existing autocmds
 "autocmd VimEnter * NERDTree    " Open NERDTree on startup
 """"""""""""""""""
-
+" Configure coffeescript to be standard 2-space indents
+au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 

@@ -129,3 +129,6 @@
 	path = bundle/JavaScript-Indent
 	url = git://github.com/vim-scripts/JavaScript-Indent.git
   ignore = untracked
+[submodule "bundle/vim-coffee-script"]
+	path = bundle/vim-coffee-script
+	url = git://github.com/vim-scripts/vim-coffee-script.git
