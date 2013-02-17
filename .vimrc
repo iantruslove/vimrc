@@ -29,18 +29,6 @@ let g:buffergator_autodismiss_on_select = 0 "stop buffergator from autoclosing
 nmap ,bb :BuffergatorToggle<CR>
 nmap ,bt :BuffergatorTabsToggle<CR>
 
-" Remap ruby debugger bindings
-map <Leader>Rb  :call g:RubyDebugger.toggle_breakpoint()<CR>
-map <Leader>Rv  :call g:RubyDebugger.open_variables()<CR>
-map <Leader>Rm  :call g:RubyDebugger.open_breakpoints()<CR>
-map <Leader>Rt  :call g:RubyDebugger.open_frames()<CR>
-map <Leader>Rs  :call g:RubyDebugger.step()<CR>
-map <Leader>Rf  :call g:RubyDebugger.finish()<CR>
-map <Leader>Rn  :call g:RubyDebugger.next()<CR>
-map <Leader>Rc  :call g:RubyDebugger.continue()<CR>
-map <Leader>Re  :call g:RubyDebugger.exit()<CR>
-map <Leader>Rd  :call g:RubyDebugger.remove_breakpoints()<CR>
-
 syntax on
 filetype plugin indent on
 
@@ -63,16 +51,19 @@ nmap ,nn :NERDTreeToggle<CR>
 nmap ,no :NERDTree<CR>
 nmap ,nq :NERDTreeClose<CR>
 
-" Learn vim movement keys, dammit!
-"inoremap  <Up>     <NOP>
-"inoremap  <Down>   <NOP>
-"inoremap  <Left>   <NOP>
-"inoremap  <Right>  <NOP>
-"noremap   <Up>     <NOP>
-"noremap   <Down>   <NOP>
-"noremap   <Left>   <NOP>
-"noremap   <Right>  <NOP>
+" Vim movement keys onlu
+inoremap  <Up>     <NOP>
+inoremap  <Down>   <NOP>
+inoremap  <Left>   <NOP>
+inoremap  <Right>  <NOP>
+noremap   <Up>     <NOP>
+noremap   <Down>   <NOP>
+noremap   <Left>   <NOP>
+noremap   <Right>  <NOP>
 
+" slime - https://github.com/jpalardy/vim-slime
+" Configure slime for tmux
+let g:slime_target = "tmux"
 
 " Run a slime screen command for this line only  (as opposed to this paragraph)
 nmap <C-c><C-l> 0v$<C-c><C-c>
@@ -191,9 +182,6 @@ vnoremap <silent> <M-Down> :<C-u>call MoveVisualDown()<CR>
 
 """ Plugin Config """
 
-" Remap TaskList plugin
-map <leader>? <Plug>TaskList
-
 " Settings for VimClojure
 let g:vimclojure#HighlightBuiltins = 1  " Highlight Clojure's builtins
 let g:vimclojure#ParenRainbow = 1       " Rainbow parentheses
@@ -207,9 +195,6 @@ let g:snips_trigger_key='<c-space>'
 " Configure CtrlP plugin
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 let g:ctrlp_working_path_mode = 0 " just use vim's PWD as the root of the ctrlp search
-
-" Configure vim-ruby-debugger plugin
-let g:ruby_debugger_progname = 'mvim'
 
 " :Shell command: runs a shell command and dumps output to a scratch buffer.
 " See http://vim.wikia.com/wiki/Display_output_of_shell_commands_in_new_window
